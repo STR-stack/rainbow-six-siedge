@@ -2,6 +2,7 @@
     padding:0;
     margin:0;
     border:0;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -11,7 +12,7 @@ header {
     position: relative;
     overflow: hidden;
     display: flex;
-    text-allign: center;
+    text-align: center;
     align-items: center;
     color:white;
 
@@ -33,6 +34,79 @@ header {
     text-align: center;
     padding: 60px, 100px;
     flex-direction: column;
+    margin:auto
+}
+
+.about h2{
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.about{
+    width: 80%;
+    margin: 200px auto;
+} 
+
+.comments h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.comments{
+    width: 80%;
+    margin: 200px auto;
+    text-align: center;
+    
+}
+
+.features h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.features{
+    width: 80%;
+    margin: 200px auto;
+    text-align: center;
+    
+}
 
 
+.features-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    background-color: red;
+    border-radius: 25px;
+    box-shadow: 0px 0px 38px 2px rgba(34, 60, 80, 0.2);
+}
+
+.card-content {
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content img {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 50px;
 }
