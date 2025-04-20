@@ -8,70 +8,90 @@
     <title>Rainbow six siedge</title>
 
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
+
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="background" style="background-image: url(images/R6S_featured.webp);"></div>
-        <div class="content">
-            <h1>Tom Clansy's Rainbow Six Siege</h1>
-            <p>Тактический шутер 2015 года , разработанный Ubisoft Montreal и изданный Ubisoft . </p>
-        </div>
-    </header>
-
-    <main>
-        <section class='about'>
-            <h2>Про что</h2>
-            <p>Каждый
-                игрок берет на себя управление атакующим или защитником в различных игровых режимах, таких как спасение
-                заложника, обезвреживание бомбы или взятие под контроль цели в комнате. В игре нет кампании, но есть
-                офлайн-режимы обучения, в которые можно играть в одиночку.</p>
-            <!--<img src="" alt=""-->
-        </section>
-
-        <section class='comments'>
-            <h1>Наши неподкупные отзывы</h1>
-            <div class='card-conteiner'>
-                <div class='card'>
-                    <div class='card-content'>
-                        <img src="images/avatar-1.jpg"
-                            alt="Здесь могло быть твоё лицо)">
-                        <p>Подгорание обеспечено</p>
+    <div class='wrapper'>
+        <div class='wrapper_content'>
+            <header class="hero">
+                <div class="layers">
+                    <div class="layers_conteiner">
+                        <div class="background layers_item">
+                            <div class="background" style="background-image: url(images/R6S_featured.webp);">
+                            </div>
+                            <div class="head-text layers_item">
+                                <div class="content">
+                                    <h1>Tom Clansy's Rainbow Six Siege</h1>
+                                    <p>Тактический шутер 2015 года , разработанный Ubisoft Montreal и изданный Ubisoft .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class='card'>
-                    <div class='card-content'>
-                        <img src="images/avatar-2.jpg" alt="Здесь могло быть твоё лицо)">
-                        <p>Люблю издеваться над поляками </p>
+            </header>
+
+            <main>
+                <section class='about'>
+                    <h2>Про что</h2>
+                    <p>Каждый
+                        игрок берет на себя управление атакующим или защитником в различных игровых режимах, таких как
+                        спасение
+                        заложника, обезвреживание бомбы или взятие под контроль цели в комнате. В игре нет кампании, но
+                        есть
+                        офлайн-режимы обучения, в которые можно играть в одиночку.</p>
+                    <!--<img src="" alt=""-->
+                </section>
+
+                <section class='comments'>
+                    <h1>Наши неподкупные отзывы</h1>
+                    <div class='card-conteiner'>
+                        <div class='card'>
+                            <div class='card-content'>
+                                <img src="images/avatar-1.jpg" alt="Здесь могло быть твоё лицо)">
+                                <p>Подгорание обеспечено</p>
+                            </div>
+                        </div>
+                        <div class='card'>
+                            <div class='card-content'>
+                                <img src="images/avatar-2.jpg" alt="Здесь могло быть твоё лицо)">
+                                <p>Люблю издеваться над поляками </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class='features'>
+                    <h1>Особенности этой помойки</h1>
+                    <ul class="features-list">
+                        <p>Полная разрушаемость окружения</p>
+                        <p>Более 70 оперативников</p>
+                        <p>Развитая киберспортивная дисциплина</p>
+                        <p>Более 15 карт+</p>
+                    </ul>
+                </section>
+            </main>
+
+            <footer>
+                <div class="footer__content">
+                    <div class="contacts">
+                        <h3>Почта</h3>
+                        <p>pomoyka2015@gmail.com</p>
+                    </div>
+                    <div class="links">
+                        <h3>Соц сети</h3>
+                        <a href="">sortir.com</a>
+                        <a href="">nig34.ru</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class='features'>
-            <h1>Особенности этой помойки</h1>
-            <ul class="features-list">
-                <li>Полная разрушаемость окружения</li>
-                <li>Более 70 оперативников</li>
-                <li>Развитая киберспортивная дисциплина</li>
-                <li>Более 15 карт+</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contacts">
-            <h3></h3>
-            <p>pomoyka2015@gmail.com</p>
+            </footer>
         </div>
-        <div class="links">
-            <h3>Соц сети</h3>
-            <a href="">sortir.com</a>
-            <a href="">nig34.ru</a>
-        </div>
-    </footer>
-
+    </div>
 </body>
 
 </html>
