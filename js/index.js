@@ -1,3 +1,25 @@
+
+const themeChanger = document.querySelector(".theme-change")
+themeChanger.addEventListener("click",()=>{
+    let isLight = localStorage.getItem('theme') == 'light'
+
+    if(isLight){
+        localStorage.setItem('theme','dark')
+        themeChanger.innerHTML = '<i class="fas fa-moon"></i>'
+        document.documentElement.style.setProperty('--main','#f2f2f2')
+        document.documentElement.style.setProperty('--KWhite','#2f2f2f')
+        document.documentElement.style.setProperty('--KWhite1','rgba(255,255,255,0.3')
+    } else{
+        localStorage.setItem('theme','light')
+        themeChanger.innerHTML = '<i class="fas fa-sun"></i>'
+        document.documentElement.style.setProperty('--main','#2f2f2f')
+        document.documentElement.style.setProperty('--KBlack','#f2f2f2')
+        document.documentElement.style.setProperty('--KBlack1','rgba(0,0,0,0.3)')
+    }
+
+    
+})
+
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 
 const sensitivity = 0.25
