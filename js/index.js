@@ -4,21 +4,21 @@ themeChanger.addEventListener("click",()=>{
     let isLight = localStorage.getItem('theme') == 'light'
 
     if(isLight){
-        localStorage.setItem('theme','dark')
+        localStorage.setItem('theme','light')
         themeChanger.innerHTML = '<i class="fas fa-moon"></i>'
         document.documentElement.style.setProperty('--main','#f2f2f2')
         document.documentElement.style.setProperty('--KWhite','#2f2f2f')
         document.documentElement.style.setProperty('--KWhite1','rgba(255,255,255,0.3')
     } else{
-        localStorage.setItem('theme','light')
+        localStorage.setItem('theme','dark')
         themeChanger.innerHTML = '<i class="fas fa-sun"></i>'
         document.documentElement.style.setProperty('--main','#2f2f2f')
         document.documentElement.style.setProperty('--KBlack','#f2f2f2')
         document.documentElement.style.setProperty('--KBlack1','rgba(0,0,0,0.3)')
     }
 
-    
 })
+
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 
@@ -32,8 +32,8 @@ document.addEventListener('mousemove', (e) => {
         duration: 1.5,
         x: dx,
         y: dy,
-        rotationX: dy / 10,
-        rotationY: dx / 10,
+        rotationX: dy / 50,
+        rotationY: dx / 50,
         ease: 'power2.out'
     })
     gsap.to('.head-text', {
@@ -89,8 +89,9 @@ document.addEventListener('DOMContentLoaded', initGallery)
 function initPlayer(){
     const btn = document.querySelector(".music-track-round")
     const audio = document.getElementById("audioPlayer")
+    const progress = document.querySelector(".progress")
 
-    btn.addEventListener("click" () => {
+    btn.addEventListener("click", () => {
         if (audio.paused){
             audio.play()
             btn.innerHTML = "<i class ='fas fa-pause'></i>"
@@ -102,15 +103,23 @@ function initPlayer(){
     })
 
     const time = document.querySelector('.time')
-    audio.addEventListener("timesuPdate", () => {
+    audio.addEventListener("timeupdate", () => {
+        progress.style.width = `${audio.currentTime/audio.duration * 100}%`
+        console.log(1)
         let minutes = Math.floor(audio.currentTime / 60)
         let seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, "0")
         let maxMinutes = Math.floor(audio.duration / 60)
-        let maxSeconds = Math.floor(audio.duration / 60).toString().padStart(2, "0")
+        let maxSeconds = Math.floor(audio.duration % 60).toString().padStart(2, "0")
 
          
         time.innerHTML = `${minutes}:${seconds} / ${maxMinutes}:${maxSeconds}`
     })
+
+    document.querySelector(".music-track-line").addEventListener("click", (e) => {
+        const rect = e.target.getBoundingClientRect()
+        const pos = (e.clientX - rect.left) / rect.width
+        audio.currentTime = pos * audio.duration
+    })
 }
 
-document.addEventListener("DOMContentLoader", initPlayer)
+document.addEventListener("DOMContentLoaded", initPlayer)
